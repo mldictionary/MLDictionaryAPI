@@ -1,0 +1,1 @@
+from .dictionary import English, Portuguese, Spanish

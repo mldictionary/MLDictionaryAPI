@@ -35,7 +35,7 @@ class Dictionary(ABC):
 
 
     @abstractmethod
-    def return_meaning(self, word: str)->Union[str, bool]:
+    def return_meaning(self, word: str)->Union[List[str], bool]:
         ...
 
 

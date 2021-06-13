@@ -1,4 +1,3 @@
-from api_dictionary.ext.webscrapy import dictionary
 from flask import Flask, jsonify
 
 from .webscrapy import English, Portuguese, Spanish
@@ -6,7 +5,7 @@ from .webscrapy import English, Portuguese, Spanish
 def init_app(app: Flask):
     
     @app.route('/v1/en/<word>/')
-    def api_en(word):
+    def api_en(word: str):
         dictionary = English()
         if meanings:=dictionary.return_meaning(word):
             api_return = {
@@ -17,7 +16,6 @@ def init_app(app: Flask):
         else:
             api_return = {'message': 'Not Found'}
             code_status = 404
-            print(meanings)
         return jsonify(api_return), code_status
     
     @app.route('/v1/pt/<word>/')
@@ -32,7 +30,6 @@ def init_app(app: Flask):
         else:
             api_return = {'message': 'Not Found'}
             code_status = 404
-            print(meanings)
         return jsonify(api_return), code_status
     
     @app.route('/v1/es/<word>/')
@@ -47,5 +44,4 @@ def init_app(app: Flask):
         else:
             api_return = {'message': 'Not Found'}
             code_status = 404
-            print(meanings)
         return jsonify(api_return), code_status

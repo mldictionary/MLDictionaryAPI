@@ -4,7 +4,7 @@ from typing import Union, List
 from .dictionary import Dictionary
 
 class Translator(Dictionary):
-    URL = 'https://www.linguee.com/english-portuguese/search?query={}'
+    URL = 'https://www.linguee.com/english-portuguese/search?source=auto&query={}'
     XPATH = '//span[@class="tag_trans"]'
     
     def __repr__(self) -> str:
@@ -18,10 +18,11 @@ class Translator(Dictionary):
                     mean = mean.replace('\n    \t                ', '').replace(':', '.')
                     mean = mean.replace('\n        \n         ', '')
                     return  re.sub('<[^>]*>', '', mean).split()[0].strip()
-                meanings = list(map(text_formatter, meanings))
+                meanings = list(dict.fromkeys(map(text_formatter, meanings)))
+                howmany = len(meanings) if len(meanings)<=5 else 6
                 return [meanings[i] for i in range(len(meanings)) \
                             if not len(meanings[i].split())>1 \
-                                if not meanings[i]==word and not '-' in meanings[i]]
+                                if not meanings[i]==word and not '-' in meanings[i]][:howmany]
             else:
                 return False
         except Exception as error:

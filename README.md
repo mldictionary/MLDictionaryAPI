@@ -20,7 +20,10 @@ language options: English, Portuguese and Spanish
 
 # ⚈ Documentation
 
-## Coming soon
+## [Documentation page](https://apidictionary.herokuapp.com/)
+> obs: for now it just works if you access from desktop screen
+
+
 
 ---
 

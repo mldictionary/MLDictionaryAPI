@@ -20,7 +20,7 @@ language options: English, Portuguese and Spanish
 
 # ⚈ Documentation
 
-## [Documentation page](https://apidictionary.herokuapp.com/)
+<a href="https://apidictionary.herokuapp.com/" target="_blank">Documentation Page</a>
 
 > obs: for now it just works if you to access from desktop screen
 

@@ -21,7 +21,7 @@ language options: English, Portuguese and Spanish
 # ⚈ Documentation
 
 ## [Documentation page](https://apidictionary.herokuapp.com/)
-> obs: for now it just works if you access from desktop screen
+> obs: for now it just works if you to access from desktop screen
 
 
 

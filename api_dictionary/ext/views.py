@@ -1,8 +1,7 @@
-from flask import Flask, render_template
+from flask import Flask, redirect
 
 def init_app(app: Flask)->None:
     
     @app.route('/')
-    @app.route('/index.html/')
     def index():
-        return render_template('index.html')
+        return redirect('https://github.com/PabloEmidio/api-dictionary')

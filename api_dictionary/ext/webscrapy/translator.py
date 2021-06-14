@@ -17,7 +17,7 @@ class Translator(Dictionary):
                 def text_formatter(mean: str)->str:
                     mean = mean.replace('\n    \t                ', '').replace(':', '.')
                     mean = mean.replace('\n        \n         ', '')
-                    return  re.sub('<[^>]*>', '', mean)[:-2].strip()
+                    return  re.sub('<[^>]*>', '', mean).split()[0].strip()
                 meanings = list(map(text_formatter, meanings))
                 return [meanings[i] for i in range(len(meanings)) \
                             if not len(meanings[i].split())>1 \

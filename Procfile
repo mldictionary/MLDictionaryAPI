@@ -1,0 +1,1 @@
+web: gunicorn 'api_dictionary/app:create_app()'

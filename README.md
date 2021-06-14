@@ -48,16 +48,12 @@ The following tools were used in the construction of the project:
 │   │   └── webscrapy
 │   │       ├── dictionary.py
 │   │       └── __init__.py
-│   ├── __init__.py
-│   ├── static
-│   │   └── css
-│   │       └── style.css
-│   └── templates
-│       └── index.html
+│   └── __init__.py
+├── file.md
 ├── LICENSE
 └── README.md
 
-6 directories, 11 files
+3 directories, 10 files
 ```
 
 ---

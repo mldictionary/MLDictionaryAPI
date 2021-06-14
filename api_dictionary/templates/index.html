@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DICTIONARY API</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="content">
+        <header class="header">
+            <h1 class="logo menu-items">
+                <a href="/">dictionary api</a>
+            </h1>
+            <nav class="menu">
+                <ul class="menu-ul">
+                    <li class="menu-items efect-hover"><a href="#about">about</a></li>
+                    <li class="menu-items efect-hover"><a href="#dictionary">dictionary</a></li>
+                    <li class="menu-items efect-hover"><a href="#translator">translator</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main">
+            <section id="about">
+                <header class="section-header">
+                    <h1 class="section-title">dictionary API({{version}})</h1>
+                    <h2 class="section-subtitle">An API build in Flask </h2>
+                </header>
+                <div class="section-about">
+                    <p class="api-infos">URL 
+                        <a class="link" href="https://github.com/PabloEmidio/api-dictionary" target="_blank">https://github.com/PabloEmidio/api-dictionary</a> | Lincence <a class="link" href="https://github.com/PabloEmidio/api-dictionary/blob/main/LICENSE" target="_blank">MIT</a> | Request Example <a href="{{example}}" class="link" target="_blank">Example</a>
+                    </p>
+                    <p class="api-about">
+                        Daily we need to know words' mean and/or translate, so I decided to create this API aim to present a easy way to access words means and Portuguese-English translations.
+                    </p>
+                        {% if warning %}
+                        <span class="warning">
+                            This is a basic flask API application, in current version it can have several bugs, please report any of them to url link shown above
+                        </span>
+                        {%endif%}
+                </div>
+            </section>
+            <section id="dictionary">
+                <header class="section-header">
+                    <h1 class="section-title">Dictionary</h1>
+                    <h3 class="section-subtitle">Search for words' meanings</h3>
+                </header>
+                <div class="section-dictionary">
+                    <p class="route"><span class="method">get</span> /v1/dictionary/<span class="par">&lt;language&gt;</span>/<span class="par">&lt;word&gt;</span></p>
+                    <div class="path-parameters">
+                        <p class="info">path parameters</p>
+                        <div class="parameters">
+                            <p class="parameter-required">language &rarr; </p>
+                            <p class="parameter-info">word's language that you wish to know: </p>
+                            <p class="parameter-info parameter-op">en: English word<br>pt: Portuguese word<br>es: Spanish word</p>
+                            <p class="parameter-required">word &rarr; </p>
+                            <p class="parameter-info">the word you wish to know the meaning</p>
+                        </div>
+                        <div class="responses">
+                            <p class="info">Responses</p>
+                            <p class="success"> 200 success</p>
+                            <p class="not-found"> language or word 200 not found</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="translator">
+                <header class="section-header">
+                    <h1 class="section-title">Translator</h1>
+                    <h3 class="section-subtitle">Search for words' translation</h3>
+                </header>
+                <div class="section-dictionary">
+                    <p class="route"><span class="method">get</span> /v1/translation/<span class="par">&lt;lan-lan&gt;</span>/<span class="par">&lt;word&gt;</span></p>
+                    <div class="path-parameters">
+                        <p class="info">path parameters</p>
+                        <div class="parameters">
+                            <p class="parameter-required">lan-lan &rarr; </p>
+                            <p class="parameter-info">tranlate order, being first lan source language word: </p>
+                            <p class="parameter-info parameter-op">en-pt: English to Portuguese<br>pt-en: Portuguese to English</p>
+                            <p class="parameter-required">word &rarr; </p>
+                            <p class="parameter-info">the word you wish to know the translation</p>
+                        </div>
+                        <div class="responses">
+                            <p class="info">Responses</p>
+                            <p class="success"> 200 success</p>
+                            <p class="not-found"> 200 lan-lan or word not found</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <header class="footer-header">
+                <img class="image" src="https://avatars.githubusercontent.com/u/69937719?v=4" alt="Created's image">
+                <h1>Created by Pablo Emidio</h1>
+            </header>
+            <div class="social-medias">
+                <a class="footer-link" href="https://github.com/PabloEmidio">GitHub</a>
+                <a class="footer-link" href="https://github.com/PabloEmidio">LinkendIn</a>
+                <a class="footer-link" href="https://github.com/PabloEmidio">Instagram</a>
+            </div>
+            <div class="stack">
+                <h1>Tech Stack</h1>
+                <a class="footer-link" href="https://www.python.org/">Python</a>
+                <a class="footer-link" href="https://flask.palletsprojects.com/en/2.0.x/tutorial/">Flask</a>
+                <a class="footer-link" href="https://docs.python-requests.org/en/master/index.html">Requests</a>
+                <a class="footer-link" href="https://pypi.org/project/parsel/">Parsel</a>
+                <a class="footer-link" href="https://www.json.org/json-en.html">Json</a>
+            </div>
+        </footer>
+    </div>
+    <script>
+        if (window.screen.width<450){
+            alert('This page was made to use on Desktop Screen, layout might not work on small screen')
+            document.location.replace('https://github.com/PabloEmidio/api-dictionary')
+        }
+
+    </script>
+</body>
+</html>

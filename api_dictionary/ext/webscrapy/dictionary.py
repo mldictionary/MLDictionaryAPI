@@ -1,5 +1,5 @@
 '''
-adapeted code from:
+adapted code from:
     https://github.com/PabloEmidio/MultiLanguage-Dictionary/blob/main/webscrapy/dictionary.py
 '''
 

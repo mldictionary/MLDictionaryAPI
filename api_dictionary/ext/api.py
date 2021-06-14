@@ -28,3 +28,7 @@ def init_app(app: Flask):
             api_return = {'message': 'Not Found'}
             code_status = 404     
         return jsonify(api_return), code_status
+
+    @app.errorhandler(404)
+    def error(error):
+        return jsonify({'message': 'Not Found'}), 404

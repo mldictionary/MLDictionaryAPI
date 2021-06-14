@@ -47,13 +47,14 @@ The following tools were used in the construction of the project:
 │   │   ├── views.py
 │   │   └── webscrapy
 │   │       ├── dictionary.py
-│   │       └── __init__.py
+│   │       ├── __init__.py
+│   │       └── translator.py
 │   └── __init__.py
 ├── file.md
 ├── LICENSE
 └── README.md
 
-3 directories, 10 files
+3 directories, 11 files
 ```
 
 ---

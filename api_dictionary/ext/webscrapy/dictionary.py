@@ -50,11 +50,10 @@ class English(Dictionary):
     def return_meaning(self, word: str)->Union[List[str], bool]:
         try:
             if len(meanings := self._get_meanings(word))>0:
-                meanings = list(map(lambda mean: re.sub('<[^>]*>', '', mean), meanings))
                 def text_formatter(mean: str)->str:
                     mean = mean.replace('\n    \t                ', '').replace(':', '.')
                     mean = mean.replace('\n        \n         ', '')
-                    return  mean
+                    return re.sub('<[^>]*>', '', mean)
                 return list(map(text_formatter, meanings)) or False
             else:
                 return False

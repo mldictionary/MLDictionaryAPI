@@ -54,12 +54,20 @@ The following tools were used in the construction of the project:
 │   │       ├── dictionary.py
 │   │       ├── __init__.py
 │   │       └── translator.py
-│   └── __init__.py
-├── file.md
+│   ├── __init__.py
+│   ├── static
+│   │   ├── css
+│   │   │   └── style.css
+│   │   └── js
+│   │       └── scripts.js
+│   └── templates
+│       └── index.html
 ├── LICENSE
-└── README.md
+├── Procfile
+├── README.md
+└── requirements.txt
 
-3 directories, 11 files
+7 directories, 16 files
 ```
 
 ---

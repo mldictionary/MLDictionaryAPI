@@ -2,7 +2,7 @@ From python:3.9
 
 Run mkdir -p /opt/api
 
-Copy . /opt/api
+Copy requirements.txt /opt/api
 Workdir /opt/api
 
 Run apt-get update

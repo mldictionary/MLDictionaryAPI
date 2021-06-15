@@ -1,6 +1,8 @@
 from flask import Flask, render_template
 from random import randint as random
 
+from datetime import datetime
+
 def init_app(app: Flask)->None:
     @app.route('/')
     @app.route('/index.html')
@@ -24,6 +26,7 @@ def init_app(app: Flask)->None:
         arguments = {
             'version': '0.0.1',
             'example': examples[random(0, len(examples)-1)],
-            'warning': True
+            'warning': True,
+            'year': datetime.now().year
         }
         return render_template('index.html', **arguments)

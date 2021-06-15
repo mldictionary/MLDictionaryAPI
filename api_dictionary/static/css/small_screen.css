@@ -1,0 +1,70 @@
+@media(max-width: 1000px){
+    section{
+        width: calc(100vw - 400px);
+    }
+}
+
+@media(max-width: 800px){
+    .header{
+        display: none;
+    }
+
+    .api-infos{
+        font-size: 1em;
+    }
+
+    section{
+        width: 90vw;
+        margin: 0 20px;
+    }
+
+    section:last-child{
+        margin-bottom: 100px;
+    }
+
+    .route{
+        padding: 15px;
+        color: #fff;
+        font-size: .6em;
+        background-color: #222;
+        margin-bottom: 15px;
+    }
+
+    .creator{
+        width: 100vw;
+        position: fixed;
+        transform: translateX(10000px);
+        transition: .2s;
+    }
+
+    .move{
+        transform: translateX(0px);
+    }
+
+    .flier{
+        cursor: pointer;
+        position: fixed;
+        z-index: 2;
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        top: 30px;
+        right: 10px;
+        background-color: #3a3;
+    }
+
+    .image{
+        margin-top: 5px;
+    }
+
+    .social-medias, .creator-link{
+        margin: 12px 0;
+    }
+
+    .z-index-3{
+        background-color: #121212;
+        color: #fff;
+        position: fixed;
+        z-index: 3;
+    }
+}

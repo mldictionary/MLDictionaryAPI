@@ -23,6 +23,7 @@ a{
 
 .header{
     position: fixed;
+    top: 0;
     height: 100vh;
     margin-right: 15px;
     width: 15vw;

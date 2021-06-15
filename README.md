@@ -32,7 +32,8 @@ This application uses Docker and Docker Compose, to install access the links bel
   [example@example]$ git clone https://github.com/PabloEmidio/api-dictionary
   [example@example]$ cd api-dictionary
   [example@example api-dictionary]$ docker-compose build
-  [example@example api-dictionary]$ docker-compose up
+  [example@example api-dictionary]$ docker-compose up -d
+  [example@example api-dictionary]$ URL="http://127.0.0.1:8088"; xdg-open $URL || sensible-browser $URL || x-www-browser $URL || gnome-open $URL
   ```
 ---
 

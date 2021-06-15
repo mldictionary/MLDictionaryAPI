@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+    api:
+        build:
+            context: .
+        container_name: api_dictionary
+        ports:
+            - 8088:8088
+        volumes:
+            - .:/opt/api
+

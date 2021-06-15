@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request, redirect
+from flask import Flask, jsonify, request
 
 from .webscrapy import English, Portuguese, Spanish, Translator
 

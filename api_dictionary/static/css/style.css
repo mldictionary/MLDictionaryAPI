@@ -254,6 +254,10 @@ section:last-child{
         margin: 0 20px;
     }
 
+    section:last-child{
+        margin-bottom: 100px;
+    }
+
     .route{
         padding: 15px;
         color: #fff;

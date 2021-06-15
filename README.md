@@ -76,12 +76,15 @@ The following tools were used in the construction of the project:
 │   │       └── scripts.js
 │   └── templates
 │       └── index.html
+├── docker-compose.yml
+├── Dockerfile
 ├── LICENSE
 ├── Procfile
 ├── README.md
 └── requirements.txt
 
-7 directories, 16 files
+7 directories, 17 files
+
 ```
 
 ---

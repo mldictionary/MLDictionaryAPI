@@ -26,9 +26,7 @@ This application uses Docker and Docker Compose, to install access the links bel
 
 ---
 
-# ⚈ How to install
-
-## 1. Git clone:
+# ⚈ How to use
 
   ``` 
   [example@example]$ git clone https://github.com/PabloEmidio/api-dictionary

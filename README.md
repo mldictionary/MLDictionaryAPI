@@ -19,13 +19,8 @@ language options: English, Portuguese and Spanish
 
 
 # ⚈ Documentation
-<h3>
-  <a href="https://apidictionary.herokuapp.com/" target="_blank">Documentation Page</a>
-</h3>
 
-> obs: for now it just works if you to access from desktop screen
-
-
+## [Documentation Page](https://apidictionary.herokuapp.com/)
 
 ---
 

@@ -1,9 +1,7 @@
-from sys import version
 from flask import Flask, render_template
 from random import randint as random
 
 def init_app(app: Flask)->None:
-    
     @app.route('/')
     @app.route('/index.html')
     def index():

@@ -31,8 +31,8 @@ This application uses Docker and Docker Compose, to install access the links bel
   ``` 
   [example@example]$ git clone https://github.com/PabloEmidio/api-dictionary
   [example@example]$ cd api-dictionary
-  [example@example]$ docker-compose build
-  [example@example]$ docker-compose up
+  [example@example api-dictionary]$ docker-compose build
+  [example@example api-dictionary]$ docker-compose up
   ```
 ---
 

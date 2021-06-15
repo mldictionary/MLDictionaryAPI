@@ -35,7 +35,7 @@ a{
 .logo, .menu-items{
     font-size: 1.2em;
     text-transform: uppercase;
-    padding: 11vh 0;
+    padding: 10.5vh 0;
 }
 
 
@@ -91,6 +91,21 @@ section:last-child{
     color: #33e
 }
 
+.link:visited{
+    color: rgba(143, 28, 24, 0.9);
+}
+
+.link:hover{
+    color: #58f
+}
+
+.link:active{
+    color: rgba(29, 137, 39, .9);
+}
+
+
+
+
 .api-about{
     font-family: Arial, Helvetica, sans-serif;
     font-style: italic;
@@ -99,7 +114,7 @@ section:last-child{
 }
 
 .warning{
-    color: red;
+    color: #f11;
 }
 
 .route{
@@ -193,9 +208,9 @@ section:last-child{
     color: #111;
 }
 
-/* footer */
+/* creator */
 
-.footer{
+.creator{
     background-color: #111;
     text-align: center;
     position: fixed;
@@ -205,7 +220,7 @@ section:last-child{
     width: 20vw;
 }
 
-.footer-header h1{
+.creator-header h1{
     font-size: 1em;
     color: #3a3;
 }
@@ -215,13 +230,19 @@ section:last-child{
     border-radius: 100%;
     width: 100px;
     height: 100px;
+    transition: ease-in-out 0.3s;
+}
+
+.image:hover{
+    transform: scale(1.5);
+    margin-bottom: 30px;
 }
 
 .social-medias{
     margin-bottom: 50px;
 }
 
-.footer-link{
+.creator-link{
     display: block;
     margin-top: 20px;
     color: #33e;
@@ -229,10 +250,32 @@ section:last-child{
     font-weight: bolder;
 }
 
+
+
 .stack h1{
     font-size: 1.6em;
     color: #fff;
 }
+
+
+/* footer */
+
+.footer{
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    width: 100%;
+    background-color: #ddd;
+    height: 50px;
+    text-align: center;
+    transition: .4s;
+}
+
+.footer p{
+    margin-top: 15px;
+}
+
+
 
 @media(max-width: 1000px){
     section{
@@ -266,7 +309,7 @@ section:last-child{
         margin-bottom: 15px;
     }
 
-    .footer{
+    .creator{
         width: 100vw;
         position: fixed;
         transform: translateX(10000px);
@@ -280,7 +323,7 @@ section:last-child{
     .flier{
         cursor: pointer;
         position: fixed;
-        z-index: 3;
+        z-index: 2;
         width: 15px;
         height: 15px;
         border-radius: 100%;
@@ -293,7 +336,14 @@ section:last-child{
         margin-top: 5px;
     }
 
-    .social-medias, .footer-link{
+    .social-medias, .creator-link{
         margin: 12px 0;
+    }
+
+    .z-index-3{
+        background-color: #121212;
+        color: #fff;
+        position: fixed;
+        z-index: 3;
     }
 }

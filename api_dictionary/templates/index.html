@@ -90,6 +90,7 @@
                 </div>
             </section>
         </main>
+        <span class="flier"></span>
         <footer class="footer">
             <header class="footer-header">
                 <img class="image" src="https://avatars.githubusercontent.com/u/69937719?v=4" alt="Created's image">
@@ -110,12 +111,5 @@
             </div>
         </footer>
     </div>
-    <script>
-        if (window.screen.width<450){
-            alert('This page was made to use on Desktop Screen, layout might not work on small screen')
-            document.location.replace('https://github.com/PabloEmidio/api-dictionary')
-        }
-
-    </script>
-</body>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 </html>

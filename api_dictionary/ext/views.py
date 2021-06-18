@@ -5,7 +5,6 @@ from datetime import datetime
 
 def init_app(app: Flask)->None:
     @app.route('/')
-    @app.route('/index.html')
     def index():
         routes_examples = [
             'v1/dictionary/en/',
@@ -29,4 +28,4 @@ def init_app(app: Flask)->None:
             'warning': True,
             'year': datetime.now().year
         }
-        return render_template('index.html', **arguments)
+        return render_template('index.jinja2', **arguments)

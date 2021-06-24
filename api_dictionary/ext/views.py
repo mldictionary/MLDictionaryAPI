@@ -15,7 +15,6 @@ def init_app(app: Flask)->None:
             routes_examples[random(0, 1)] + 'current',
             routes_examples[random(0, 1)] + 'store',
             routes_examples[random(0, 1)] + 'life',
-            routes_examples[random(0, 1)] + 'programming',
             routes_examples[random(0, 1)] + 'get',
             routes_examples[random(0, 1)] + 's',
             routes_examples[random(0, 1)] + 'sadness',

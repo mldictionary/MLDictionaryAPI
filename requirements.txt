@@ -10,24 +10,19 @@ Flask==2.0.1
   - Werkzeug [required: >=2.0, installed: 2.0.1]
 gunicorn==20.1.0
   - setuptools [required: >=3.0, installed: 56.0.0]
+mldictionary==0.1.6
+  - beautifulsoup4 [required: >=4.9.3, installed: 4.9.3]
+    - soupsieve [required: >1.2, installed: 2.2.1]
+  - requests [required: >=2.25.1, installed: 2.25.1]
+    - certifi [required: >=2017.4.17, installed: 2021.5.30]
+    - chardet [required: >=3.0.2,<5, installed: 4.0.0]
+    - idna [required: >=2.5,<3, installed: 2.10]
+    - urllib3 [required: >=1.21.1,<1.27, installed: 1.26.5]
 nltk==3.6.2
   - click [required: Any, installed: 8.0.1]
   - joblib [required: Any, installed: 1.0.1]
   - regex [required: Any, installed: 2021.4.4]
   - tqdm [required: Any, installed: 4.61.1]
-parsel==1.6.0
-  - cssselect [required: >=0.9, installed: 1.1.0]
-  - lxml [required: Any, installed: 4.6.3]
-  - six [required: >=1.6.0, installed: 1.16.0]
-  - w3lib [required: >=1.19.0, installed: 1.22.0]
-    - six [required: >=1.4.1, installed: 1.16.0]
 pep517==0.10.0
   - toml [required: Any, installed: 0.10.2]
-pipdeptree==2.0.0
-  - pip [required: >=6.0.0, installed: 21.1.1]
 python-dotenv==0.17.1
-requests==2.25.1
-  - certifi [required: >=2017.4.17, installed: 2021.5.30]
-  - chardet [required: >=3.0.2,<5, installed: 4.0.0]
-  - idna [required: >=2.5,<3, installed: 2.10]
-  - urllib3 [required: >=1.21.1,<1.27, installed: 1.26.5]

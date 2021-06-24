@@ -19,7 +19,9 @@ def init_app(app: Flask):
             'pt-en': Translator()
         }
         dictionary = route_dictionary[current_route_work]
-        if meanings:=dictionary.return_meaning(word):
+        if meanings:=dictionary.get_meanings(word):
+            if str(dictionary) == 'Spanish':
+                meanings = [mean[6:].strip() for mean in meanings]
             api_return = {
                 'source': dictionary.URL.format(word),
                 'meanings': meanings

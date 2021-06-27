@@ -23,7 +23,6 @@ This application uses Docker and Docker Compose, to install access the links bel
 - [Docker](https://docs.docker.com/get-docker/)
 - [Docker compose](https://docs.docker.com/compose/install/)
 
-
 ---
 
 # ⚈ How to use
@@ -31,7 +30,6 @@ This application uses Docker and Docker Compose, to install access the links bel
   ``` 
   [example@example]$ git clone https://github.com/PabloEmidio/api-dictionary
   [example@example]$ cd api-dictionary
-  [example@example api-dictionary]$ docker-compose build
   [example@example api-dictionary]$ docker-compose up -d
   [example@example api-dictionary]$ URL="http://127.0.0.1:8088"; xdg-open $URL || sensible-browser $URL || x-www-browser $URL || gnome-open $URL
   ```
@@ -49,11 +47,11 @@ The following tools were used in the construction of the project:
 
 - [Python](https://www.python.org/)
 - [Flask](https://flask.palletsprojects.com/en/2.0.x/tutorial/)
-- [Requests](https://docs.python-requests.org/en/master/index.html)
-- [Parsel](https://pypi.org/project/parsel/)
+- [MLDictionary](https://pypi.org/project/mldictionary/)
 - [Json](https://www.json.org/json-en.html)
 
 ---
+
 # ⚈ Tree Directory
 
 ``` bash

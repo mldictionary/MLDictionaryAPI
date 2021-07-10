@@ -10,7 +10,7 @@ Flask==2.0.1
   - Werkzeug [required: >=2.0, installed: 2.0.1]
 gunicorn==20.1.0
   - setuptools [required: >=3.0, installed: 56.0.0]
-mldictionary==0.1.6
+mldictionary==0.1.11
   - beautifulsoup4 [required: >=4.9.3, installed: 4.9.3]
     - soupsieve [required: >1.2, installed: 2.2.1]
   - requests [required: >=2.25.1, installed: 2.25.1]

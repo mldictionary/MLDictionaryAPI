@@ -1,21 +1,4 @@
-DateTime==4.3
-  - pytz [required: Any, installed: 2021.1]
-  - zope.interface [required: Any, installed: 5.4.0]
-    - setuptools [required: Any, installed: 56.0.0]
-Flask==2.0.1
-  - click [required: >=7.1.2, installed: 8.0.1]
-  - itsdangerous [required: >=2.0, installed: 2.0.1]
-  - Jinja2 [required: >=3.0, installed: 3.0.1]
-    - MarkupSafe [required: >=2.0, installed: 2.0.1]
-  - Werkzeug [required: >=2.0, installed: 2.0.1]
-gunicorn==20.1.0
-  - setuptools [required: >=3.0, installed: 56.0.0]
+flask
+gunicorn
 mldictionary
-nltk==3.6.2
-  - click [required: Any, installed: 8.0.1]
-  - joblib [required: Any, installed: 1.0.1]
-  - regex [required: Any, installed: 2021.4.4]
-  - tqdm [required: Any, installed: 4.61.1]
-pep517==0.10.0
-  - toml [required: Any, installed: 0.10.2]
-python-dotenv==0.17.1
+python-dotenv

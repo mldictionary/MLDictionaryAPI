@@ -33,11 +33,6 @@ This application uses Docker and Docker Compose, to install access the links bel
   [example@example api-dictionary]$ docker-compose up -d
   [example@example api-dictionary]$ URL="http://127.0.0.1:8088"; xdg-open $URL || sensible-browser $URL || x-www-browser $URL || gnome-open $URL
   ```
----
-
-# ⚈ Documentation
-
-## [Documentation Page](https://apidictionary.herokuapp.com/)
 
 ---
 
@@ -57,32 +52,32 @@ The following tools were used in the construction of the project:
 ``` bash
 .
 ├── api_dictionary
-│   ├── app.py
-│   ├── ext
-│   │   ├── api.py
+│   ├── resources
 │   │   ├── __init__.py
-│   │   ├── views.py
-│   │   └── webscrapy
-│   │       ├── dictionary.py
-│   │       ├── __init__.py
-│   │       └── translator.py
-│   ├── __init__.py
+│   │   └── translator.py
+│   ├── routes
+│   │   ├── __init__.py
+│   │   ├── api.py
+│   │   └── views.py
 │   ├── static
 │   │   ├── css
+│   │   │   ├── small_screen.css
 │   │   │   └── style.css
 │   │   └── js
 │   │       └── scripts.js
-│   └── templates
-│       └── index.html
-├── docker-compose.yml
+│   ├── templates
+│   │   └── index.jinja2
+│   ├── __init__.py
+│   ├── app.py
+│   └── const.py
 ├── Dockerfile
 ├── LICENSE
 ├── Procfile
 ├── README.md
+├── docker-compose.yml
 └── requirements.txt
 
-7 directories, 17 files
-
+7 directories, 18 files
 ```
 
 ---

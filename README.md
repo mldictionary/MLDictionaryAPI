@@ -34,6 +34,10 @@ This application uses Docker and Docker Compose, to install access the links bel
   [example@example api-dictionary]$ URL="http://127.0.0.1:8088"; xdg-open $URL || sensible-browser $URL || x-www-browser $URL || gnome-open $URL
   ```
 
+## Documentation
+
+Proper documentation can be find in [extern deploy](https://apidictionary.herokuapp.com/) or using the [local docker deploy](http://127.0.0.1:8088/) in your machine.
+
 ---
 
 # ⚈ Tech Stack

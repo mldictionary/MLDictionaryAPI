@@ -1,7 +1,7 @@
 <h1 align="center">
   <img alt="icon" src="./.images/logo.png">
 </h1>
-<h1 align="center">Dictionary API</h1>
+<h1 align="center">MLDictionary API</h1>
 <h2 align="center" >
 ACCESS WORDS' DEFINITIONS<br><br>
     <a href="https://github.com/PabloEmidio/api-dictionary/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/PabloEmidio/api-dictionary?style=social"></a>

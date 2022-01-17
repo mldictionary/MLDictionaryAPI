@@ -9,6 +9,7 @@ RUN apt-get update
 RUN pip3 install -r requirements.txt
 
 EXPOSE 8088
+ENV REDIS_HOST host.docker.internal
 
 ENTRYPOINT ["gunicorn", "-b", "0.0.0.0:8088"]
-CMD ["api_dictionary.app:create_app()"]
+CMD ["mldictionary_api.app:create_app()"]

@@ -1,2 +1,2 @@
-export FLASK_APP=api_dictionary/app
+export FLASK_APP=mldictionary_api/app
 export FLASK_ENV=development

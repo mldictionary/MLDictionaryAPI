@@ -6,3 +6,4 @@ class Translator(Dictionary):
     LANGUAGE = 'Translator(en-pt)'
     TARGET_TAG = 'span'
     TARGET_ATTR = {'class': 'tag_trans'}
+    REPLACES = {}

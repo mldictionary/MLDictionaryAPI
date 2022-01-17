@@ -27,7 +27,7 @@ def dictionary(word: str):
 
     choice = request.url.split('/')[5]
     dictionary = DICTIONARIES[choice]
-    request_ip = request.remote_addr
+    request_ip = request.remote_addr if not request.headers.getlist("X-Forwarded-For") else request.headers.getlist("X-Forwarded-For")[0]
     total_requests = requests_db.get(f'requests:{request_ip}')
     if not (meanings := dictionary.get_meanings(word)):
         raise NotFound(f'"{word}" not found, check the spelling and try again')

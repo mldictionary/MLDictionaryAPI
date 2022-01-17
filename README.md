@@ -1,7 +1,7 @@
 <h1 align="center">
   <img alt="icon" src="./.images/logo.png">
 </h1>
-<h1 align="center">Dictionary API</h1>
+<h1 align="center">MLDictionary API</h1>
 <h2 align="center" >
 ACCESS WORDS' DEFINITIONS<br><br>
     <a href="https://github.com/PabloEmidio/api-dictionary/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/PabloEmidio/api-dictionary?style=social"></a>
@@ -34,6 +34,10 @@ This application uses Docker and Docker Compose, to install access the links bel
   [example@example api-dictionary]$ URL="http://127.0.0.1:8088"; xdg-open $URL || sensible-browser $URL || x-www-browser $URL || gnome-open $URL
   ```
 
+## Documentation
+
+Proper documentation can be find in [extern deploy](https://mldictionaryapi.herokuapp.com/) or using the [local docker deploy](http://127.0.0.1:8088/) in your machine.
+
 ---
 
 # ⚈ Tech Stack
@@ -43,6 +47,7 @@ The following tools were used in the construction of the project:
 - [Python](https://www.python.org/)
 - [Flask](https://flask.palletsprojects.com/en/2.0.x/tutorial/)
 - [MLDictionary](https://pypi.org/project/mldictionary/)
+- [Redis](https://redis.com/)
 - [Json](https://www.json.org/json-en.html)
 
 ---

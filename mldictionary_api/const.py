@@ -2,7 +2,7 @@ from random import randint as random
 
 from mldictionary import English, Portuguese, Spanish
 
-from api_dictionary.resources import Translator
+from mldictionary_api.resources import Translator
 
 
 VIEWS_PREFIX = '/'
@@ -34,3 +34,8 @@ DICTIONARIES = {
     'en-pt': Translator(),
     'pt-en': Translator(),
 }
+
+
+LOCAL_ADDR = "127.0.0.1"
+TOTAL_REQUESTS_ALLOW = 50
+TTL_REQUEST = 60 * 60

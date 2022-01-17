@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DICTIONARY API</title>
+    <title>MLDICTIONARY API</title>
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/small_screen.css') }}">
 </head>
@@ -12,7 +12,7 @@
     <div class="content">
         <header class="header">
             <h1 class="logo menu-items">
-                <a href="/">dictionary api</a>
+                <a href="/">MLDICTIONARY API</a>
             </h1>
             <nav class="menu">
                 <ul class="menu-ul">
@@ -29,11 +29,11 @@
                     <h2 class="section-subtitle">An API built in Flask </h2>
                 </header>
                 <div class="section-about">
-                    <p class="api-infos">URL 
-                        <a class="link" href="https://github.com/PabloEmidio/api-dictionary" target="_blank">https://github.com/PabloEmidio/api-dictionary</a> | Lincence <a class="link" href="https://github.com/PabloEmidio/api-dictionary/blob/main/LICENSE" target="_blank">MIT</a> | Request Example <a href="{{example}}" class="link" target="_blank">Example</a>
+                    <p class="api-infos">URL:&nbsp;
+                        <a class="link" href="https://github.com/PabloEmidio/MLDictionaryAPI" target="_blank">Repository</a> | Lincence <a class="link" href="https://github.com/PabloEmidio/MLDictionaryAPI/blob/main/LICENSE" target="_blank">MIT</a> | Request Example <a href="{{example}}" class="link" target="_blank">Example</a>
                     </p>
                     <p class="api-about">
-                        Daily we need to know words' meanings and/or translate, so I decided to create this API aiming to present a easy way to access words meanings and Portuguese-English translations.
+                        Daily we need to know words' meanings and/or translate, so I decided to create this API aiming to <br>present a easy way to access words meanings and Portuguese-English translations.
                     </p>
                         {% if warning %}
                         <span class="warning">
@@ -44,7 +44,7 @@
             </section>
             <section id="dictionary">
                 <header class="section-header">
-                    <h1 class="section-title">Dictionary</h1>
+                    <h1 class="section-title">MLDICTIONARY API</h1>
                     <h3 class="section-subtitle">Search for words' meanings</h3>
                 </header>
                 <div class="section-dictionary">
@@ -99,6 +99,7 @@
             </header>
             <div class="social-medias">
                 <a class="creator-link link" href="https://github.com/PabloEmidio" target="_blank">GitHub</a>
+                <a class="creator-link link" href="https://twitter.com/utrapythonico" target="_blank">Twitter</a>
                 <a class="creator-link link" href="https://www.linkedin.com/in/pabloemidio/" target="_blank">LinkendIn</a>
                 <a class="creator-link link" href="https://www.instagram.com/mr.emidioss/" target="_blank">Instagram</a>
             </div>
@@ -106,13 +107,11 @@
                 <h1>Tech Stack</h1>
                 <a class="creator-link link" target="_blank" href="https://www.python.org/">Python</a>
                 <a class="creator-link link" target="_blank" href="https://flask.palletsprojects.com/en/2.0.x/">Flask</a>
-                <a class="creator-link link" target="_blank" href="https://docs.python-requests.org/en/master/index.html">Requests</a>
-                <a class="creator-link link" target="_blank" href="https://pypi.org/project/parsel/">Parsel</a>
-                <a class="creator-link link" target="_blank" href="https://www.json.org/json-en.html">Json</a>
+                <a class="creator-link link" target="_blank" href="https://pypi.org/project/mldictionary/">MLDictionary</a>
             </div>
         </aside>
         <footer class="footer">
-            <p>&copy Pablo Emidio {{year}}</p>
+            <p>&copy Pablo Emidio 2021-{{year}}</p>
         </footer>
     </div>
 

@@ -2,3 +2,4 @@ flask
 gunicorn
 mldictionary
 python-dotenv
+redis

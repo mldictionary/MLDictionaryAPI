@@ -36,7 +36,7 @@ This application uses Docker and Docker Compose, to install access the links bel
 
 ## Documentation
 
-Proper documentation can be find in [extern deploy](https://apidictionary.herokuapp.com/) or using the [local docker deploy](http://127.0.0.1:8088/) in your machine.
+Proper documentation can be find in [extern deploy](https://mldictionaryapi.herokuapp.com/) or using the [local docker deploy](http://127.0.0.1:8088/) in your machine.
 
 ---
 
@@ -47,6 +47,7 @@ The following tools were used in the construction of the project:
 - [Python](https://www.python.org/)
 - [Flask](https://flask.palletsprojects.com/en/2.0.x/tutorial/)
 - [MLDictionary](https://pypi.org/project/mldictionary/)
+- [Redis](https://redis.com/)
 - [Json](https://www.json.org/json-en.html)
 
 ---

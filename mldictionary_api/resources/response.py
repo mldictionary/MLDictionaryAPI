@@ -20,9 +20,9 @@ class ResponseAPI:
     def get_meanings(self, lang: str, word: str):
         dictionary = DICTIONARIES[lang]
         request_ip = self.__get_request_ip(request.headers.getlist("X-Forwarded-For"))
+        total_requests = RedisRequests().get(f'requests:{request_ip}')
 
-        if not (ilimited_dictionary := self.__valid_request(request_ip, dictionary)):
-            total_requests = RedisRequests().get(f'requests:{request_ip}')
+        if limited_request := self.__limit_request(dictionary):
             if total_requests > TOTAL_REQUESTS_ALLOW:
                 raise TooManyRequests(
                     f'The address {request_ip} is allow to make only "{TOTAL_REQUESTS_ALLOW}" requests '
@@ -30,12 +30,12 @@ class ResponseAPI:
                 )
 
         if not (meanings := self.__get_meanings(word, dictionary)):
+            self.__save_request_attempt(request_ip, total_requests, limited_request)
             raise NotFound(f'"{word}" not found, check the spelling and try again')
 
-        if not ilimited_dictionary:
-            self.__make_cache(
-                dictionary.LANGUAGE, request_ip, total_requests, word, meanings
-            )
+        self.__save_request_attempt(request_ip, total_requests, limited_request)
+        self.__make_cache(dictionary.LANGUAGE.lower(), word, meanings, limited_request)
+
         return (
             jsonify({'source': dictionary.URL.format(word), 'meanings': meanings}),
             200,
@@ -53,14 +53,14 @@ class ResponseAPI:
             request.remote_addr if not heroku_proxy_header else heroku_proxy_header[0]
         )
 
-    def __valid_request(self, request_ip: str, dictionary: Type[Dictionary]):
+    def __limit_request(self, dictionary: Type[Dictionary]) -> bool:
         if not LIMITED_REQUESTS:
-            return True
+            return False
 
         for limited_dictionary in LIMITED_REQUESTS_DICTIONARIES:
             if isinstance(dictionary, limited_dictionary):
-                return False
-        return True
+                return True
+        return False
 
     def __get_meanings(self, word: str, dictionary: Type[Dictionary]) -> list[str]:
         meanings = RedisMeaningsCache().get(
@@ -68,18 +68,16 @@ class ResponseAPI:
         )
         return meanings if meanings else dictionary.get_meanings(word)
 
-    def __make_cache(
-        self,
-        dict_lan: str,
-        request_ip: str,
-        total_requests: int,
-        word: str,
-        meanings: list[str],
-    ):
+    def __save_request_attempt(self, request_ip: str, total_requests: int, limited_request: bool):
+            if limited_request:
+                RedisRequests().set(
+                    f'requests:{request_ip}',
+                    str(total_requests + 1),
+                    TTL_REQUEST
+                )
 
-        RedisRequests().set(
-            f'requests:{request_ip}', str(total_requests + 1), TTL_REQUEST
-        )
-        RedisMeaningsCache().set(
-            f'meanings:{dict_lan.lower()}:{word}', meanings, TTL_MEANINGS_CACHE
-        )
+    def __make_cache(self, dict_lan: str, word: str, meanings: list[str], limited_request: bool):
+        if limited_request:
+            RedisMeaningsCache().set(
+                f'meanings:{dict_lan}:{word}', meanings, TTL_MEANINGS_CACHE
+            )

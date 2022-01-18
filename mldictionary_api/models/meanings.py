@@ -12,6 +12,5 @@ class RedisMeaningsCache(RedisBaseModel):
         return list(meanings)
 
     def set(self, key, values, ttl: int):
-        for value in values:
-            self.db.sadd(key, value)
+        self.db.sadd(key, *values)
         self.db.expire(key, ttl)

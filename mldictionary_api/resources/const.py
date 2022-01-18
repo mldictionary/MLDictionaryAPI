@@ -1,9 +1,19 @@
+import os
+
 from mldictionary import English, Portuguese, Spanish
 
+from mldictionary_api.domains.environment import EnvironmentEnum
 from mldictionary_api.resources.translator import Translator
+from .utils import limit_requests
 
 LIMITED_REQUESTS_DICTIONARIES = [Translator]
-LOCAL_ADDR = '127.0.0.1'
+
+# change to Environment.DEVELOPMENT based if it will or won't be necessary make cache
+ENVIRONMENT = os.getenv('ENVIRONMENT', EnvironmentEnum.LOCAL.name)
+
+LIMITED_REQUESTS = limit_requests[getattr(EnvironmentEnum, ENVIRONMENT)]
+
+
 TOTAL_REQUESTS_ALLOW = 50
 TTL_REQUEST = 60 * 60
 TTL_MEANINGS_CACHE = 24 * 60 * 60

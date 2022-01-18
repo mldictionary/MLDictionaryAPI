@@ -56,9 +56,17 @@ The following tools were used in the construction of the project:
 
 ``` bash
 .
-├── api_dictionary
+├── mldictionary_api
+│   ├── models
+│   │   ├── __init__.py
+│   │   ├── base.py
+│   │   ├── const.py
+│   │   ├── meanings.py
+│   │   └── requests.py
 │   ├── resources
 │   │   ├── __init__.py
+│   │   ├── const.py
+│   │   ├── response.py
 │   │   └── translator.py
 │   ├── routes
 │   │   ├── __init__.py
@@ -82,7 +90,8 @@ The following tools were used in the construction of the project:
 ├── docker-compose.yml
 └── requirements.txt
 
-7 directories, 18 files
+8 directories, 25 files
+
 ```
 
 ---

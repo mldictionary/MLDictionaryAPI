@@ -28,10 +28,10 @@ This application uses Docker and Docker Compose, to install access the links bel
 # ⚈ How to use
 
   ``` 
-  [example@example]$ git clone https://github.com/PabloEmidio/api-dictionary
-  [example@example]$ cd api-dictionary
-  [example@example api-dictionary]$ docker-compose up -d
-  [example@example api-dictionary]$ URL="http://127.0.0.1:8088"; xdg-open $URL || sensible-browser $URL || x-www-browser $URL || gnome-open $URL
+  [example@example]$ git clone https://github.com/PabloEmidio/MLDictionaryAPI
+  [example@example]$ cd MLDictionaryAPI
+  [example@example MLDictionaryAPI]$ docker-compose up -d
+  [example@example MLDictionaryAPI]$ URL="http://127.0.0.1:8088"; xdg-open $URL || sensible-browser $URL || x-www-browser $URL || gnome-open $URL
   ```
 
 ## Documentation

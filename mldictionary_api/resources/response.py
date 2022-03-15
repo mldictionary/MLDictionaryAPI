@@ -34,10 +34,10 @@ class ResponseAPI:
             raise NotFound(f'"{word}" not found, check the spelling and try again')
 
         self.__save_request_attempt(request_ip, total_requests, limited_request)
-        self.__make_cache(dictionary.LANGUAGE.lower(), word, meanings, limited_request)
+        self.__make_cache(dictionary.language.lower(), word, meanings, limited_request)
 
         return (
-            jsonify({'source': dictionary.URL.format(word), 'meanings': meanings}),
+            jsonify({'source': dictionary.url.format(word), 'meanings': meanings}),
             200,
         )
 
@@ -64,7 +64,7 @@ class ResponseAPI:
 
     def __get_meanings(self, word: str, dictionary: Type[Dictionary]) -> list[str]:
         meanings = RedisMeaningsCache().get(
-            f'meanings:{dictionary.LANGUAGE.lower()}:{word}'
+            f'meanings:{dictionary.LANGUAGE.lower()}:{word.lower()}'
         )
         return meanings if meanings else dictionary.get_meanings(word)
 
@@ -79,5 +79,5 @@ class ResponseAPI:
     def __make_cache(self, dict_lan: str, word: str, meanings: list[str], limited_request: bool):
         if limited_request:
             RedisMeaningsCache().set(
-                f'meanings:{dict_lan}:{word}', meanings, TTL_MEANINGS_CACHE
+                f'meanings:{dict_lan}:{word.lowe()}', meanings, TTL_MEANINGS_CACHE
             )

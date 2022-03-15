@@ -64,7 +64,7 @@ class ResponseAPI:
 
     def __get_meanings(self, word: str, dictionary: Type[Dictionary]) -> list[str]:
         meanings = RedisMeaningsCache().get(
-            f'meanings:{dictionary.LANGUAGE.lower()}:{word.lower()}'
+            f'meanings:{dictionary.language.lower()}:{word.lower()}'
         )
         return meanings if meanings else dictionary.get_meanings(word)
 

@@ -1,5 +1,5 @@
 flask
 gunicorn
-mldictionary
+mldictionary==0.2.5
 python-dotenv
 redis

@@ -79,5 +79,5 @@ class ResponseAPI:
     def __make_cache(self, dict_lan: str, word: str, meanings: list[str], limited_request: bool):
         if limited_request:
             RedisMeaningsCache().set(
-                f'meanings:{dict_lan}:{word.lowe()}', meanings, TTL_MEANINGS_CACHE
+                f'meanings:{dict_lan}:{word.lower()}', meanings, TTL_MEANINGS_CACHE
             )

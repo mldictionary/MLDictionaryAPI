@@ -4,8 +4,7 @@
 <h1 align="center">MLDictionary API</h1>
 <h2 align="center" >
 ACCESS WORDS' DEFINITIONS<br><br>
-    <a href="https://github.com/PabloEmidio/api-dictionary/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/PabloEmidio/api-dictionary?style=social"></a>
-    <a href="https://github.com/PabloEmidio"><img alt="GitHub followers" src="https://img.shields.io/github/followers/PabloEmidio?label=Follow%20me&style=social"></a>
+    <a href="https://github.com/mldictionary/MLDictionaryAPI/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/PabloEmidio/api-dictionary?style=social"></a>
 </h2>
 
 ---
@@ -28,7 +27,7 @@ This application uses Docker and Docker Compose, to install access the links bel
 # ⚈ How to use
 
   ``` 
-  [example@example]$ git clone https://github.com/PabloEmidio/MLDictionaryAPI
+  [example@example]$ git clone https://github.com/mldictionary/MLDictionaryAPI
   [example@example]$ cd MLDictionaryAPI
   [example@example MLDictionaryAPI]$ docker-compose up -d
   [example@example MLDictionaryAPI]$ URL="http://127.0.0.1:8088"; xdg-open $URL || sensible-browser $URL || x-www-browser $URL || gnome-open $URL
